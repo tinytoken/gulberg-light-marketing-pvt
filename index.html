@@ -1,59 +1,741 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gulberg Light Marketing | Real Estate Agency Islamabad</title>
-    <meta name="description" content="Gulberg Light Marketing (Pvt). Ltd is a premier real estate agency in Gulberg Greens, Islamabad. Find luxury homes, commercial plots, and premium properties." />
-    <meta name="keywords" content="Gulberg Greens Real Estate, Islamabad Property Dealer, Gulberg Greens Plots for Sale, Real Estate Agency Islamabad" />
-    
-    <!-- Structured Data for Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Gulberg Light Marketing (Pvt). Ltd",
-      "image": "https://picsum.photos/seed/office/800/600",
-      "@id": "",
-      "url": "https://gulberglightmarketing.com",
-      "telephone": "03185458823",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Office no 35 Ground Floor, Diamond Mall & Residency, Service Rd S, Gulberg Greens Block B",
-        "addressLocality": "Islamabad",
-        "addressRegion": "ICT",
-        "postalCode": "44000",
-        "addressCountry": "PK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 33.6295556,
-        "longitude": 73.1557007
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://web.facebook.com/sardarrizwanrealtor/",
-        "https://www.instagram.com/gulberglightmarketing_pvt.ltd/",
-        "https://www.youtube.com/@Gulberg.Light.Marketing/featured"
-      ]
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulberg Light Marketing | Real Estate Agency Islamabad</title>
+  <meta name="description" content="Gulberg Light Marketing (Pvt). Ltd is a premier real estate agency in Gulberg Greens, Islamabad. Find luxury homes, commercial plots, and premium properties." />
+  <meta name="keywords" content="Gulberg Greens Real Estate, Islamabad Property Dealer, Gulberg Greens Plots for Sale, Real Estate Agency Islamabad" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            gold: {
+              400: '#F1D570',
+              500: '#D4AF37',
+              600: '#AA8C2C',
+            },
+            brand: {
+              900: '#0F172A', // Deep Navy
+              800: '#1E293B',
+              50: '#F8FAFC',
+            }
+          }
+        }
+      }
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  </script>
+
+  <!-- Custom CSS for animations -->
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+
+  <!-- Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Gulberg Light Marketing (Pvt). Ltd",
+    "image": "https://picsum.photos/seed/office/800/600",
+    "@id": "",
+    "url": "https://gulberglightmarketing.com",
+    "telephone": "03185458823",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Office no 35 Ground Floor, Diamond Mall & Residency, Service Rd S, Gulberg Greens Block B",
+      "addressLocality": "Islamabad",
+      "addressRegion": "ICT",
+      "postalCode": "44000",
+      "addressCountry": "PK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6295556,
+      "longitude": 73.1557007
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://web.facebook.com/sardarrizwanrealtor/",
+      "https://www.instagram.com/gulberglightmarketing_pvt.ltd/",
+      "https://www.youtube.com/@Gulberg.Light.Marketing/featured"
+    ]
+  }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-brand-50 antialiased">
+
+  <!-- 1. Responsive Navigation Bar -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 bg-gold-500 rounded-sm flex items-center justify-center text-brand-900 font-serif font-bold text-xl group-hover:bg-white transition-colors">
+            GL
+          </div>
+          <div>
+            <h1 class="font-serif font-bold text-xl tracking-wide leading-tight">Gulberg Light</h1>
+            <p class="text-[10px] tracking-[0.2em] uppercase text-gold-400">Marketing</p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-sm font-medium hover:text-gold-400 transition-colors">Home</a>
+          <a href="#properties" class="text-sm font-medium hover:text-gold-400 transition-colors">Properties</a>
+          <a href="#about" class="text-sm font-medium hover:text-gold-400 transition-colors">About</a>
+          <a href="#projects" class="text-sm font-medium hover:text-gold-400 transition-colors">Projects</a>
+          <a href="#contact" class="text-sm font-medium hover:text-gold-400 transition-colors">Contact</a>
+          <a href="tel:03185458823" class="bg-gold-500 hover:bg-gold-600 text-brand-900 px-5 py-2 rounded-sm font-semibold transition-colors flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-phone"></i> 0318 5458823
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-white hover:text-gold-400 focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-900 absolute top-full left-0 w-full shadow-xl border-t border-gray-800">
+      <div class="px-4 pt-2 pb-6 space-y-1">
+        <a href="#home" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-gold-400 border-b border-gray-800">Home</a>
+        <a href="#properties" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-gold-400 border-b border-gray-800">Properties</a>
+        <a href="#about" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-gold-400 border-b border-gray-800">About</a>
+        <a href="#projects" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-gold-400 border-b border-gray-800">Projects</a>
+        <a href="#contact" class="mobile-link block px-3 py-3 text-base font-medium text-white hover:text-gold-400 border-b border-gray-800">Contact</a>
+        <a href="tel:03185458823" class="block mt-4 text-center bg-gold-500 text-brand-900 px-5 py-3 rounded-sm font-bold">
+          <i class="fa-solid fa-phone mr-2"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://picsum.photos/seed/islamabadluxury/1920/1080" alt="Luxury Real Estate Islamabad" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-900/90 to-brand-900/60"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-16">
+      <p class="text-gold-400 font-semibold tracking-[0.2em] uppercase mb-4 fade-in-up">Welcome to Excellence</p>
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight fade-in-up" style="transition-delay: 100ms;">
+        Trusted Real Estate Agency <br class="hidden md:block" />
+        in <span class="text-gold-500 italic font-light">Gulberg Greens</span> Islamabad
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light fade-in-up" style="transition-delay: 200ms;">
+        Discover premium properties, secure investments, and luxury living with the most reliable property consultants in the capital.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style="transition-delay: 300ms;">
+        <a href="#properties" class="bg-gold-500 hover:bg-gold-600 text-brand-900 px-8 py-4 rounded-sm font-semibold transition-colors text-lg">
+          View Properties
+        </a>
+        <a href="#contact" class="bg-transparent border border-white hover:bg-white hover:text-brand-900 text-white px-8 py-4 rounded-sm font-semibold transition-colors text-lg">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative fade-in-up">
+          <div class="absolute -top-4 -left-4 w-24 h-24 bg-gold-100 rounded-sm -z-10"></div>
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-gold-500 rounded-sm -z-10"></div>
+          <img src="https://picsum.photos/seed/realtoroffice/800/1000" alt="About Gulberg Light Marketing" class="w-full rounded-sm shadow-2xl object-cover h-[500px]" />
+          <div class="absolute bottom-8 -right-8 bg-brand-900 text-white p-6 rounded-sm shadow-xl hidden md:block">
+            <p class="text-4xl font-serif font-bold text-gold-500 mb-1">10+</p>
+            <p class="text-sm uppercase tracking-wider">Years Experience</p>
+          </div>
+        </div>
+        <div class="fade-in-up" style="transition-delay: 200ms;">
+          <p class="text-gold-600 font-semibold tracking-wider uppercase mb-2">About Us</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-6">Your Premium Property Partner in Islamabad</h2>
+          <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+            <strong>Gulberg Light Marketing (Pvt). Ltd</strong> is a premier real estate agency dedicated to providing exceptional property solutions in Gulberg Greens and surrounding areas of Islamabad.
+          </p>
+          <p class="text-gray-600 mb-8 leading-relaxed">
+            With our deep-rooted expertise and comprehensive market knowledge, we specialize in luxury homes, commercial plots, and high-yield investment opportunities. Our commitment to transparency, integrity, and client satisfaction has made us the most trusted name in the capital's real estate sector.
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-brand-900 font-medium">
+              <i class="fa-solid fa-check text-gold-500 mr-3 text-xl"></i> Verified & Secure Properties
+            </li>
+            <li class="flex items-center text-brand-900 font-medium">
+              <i class="fa-solid fa-check text-gold-500 mr-3 text-xl"></i> Exclusive Access to Premium Listings
+            </li>
+            <li class="flex items-center text-brand-900 font-medium">
+              <i class="fa-solid fa-check text-gold-500 mr-3 text-xl"></i> End-to-End Legal & Transfer Support
+            </li>
+          </ul>
+          <a href="#contact" class="inline-flex items-center text-brand-900 font-bold hover:text-gold-600 transition-colors group">
+            Speak with an Expert <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Properties Section -->
+  <section id="properties" class="py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-gold-600 font-semibold tracking-wider uppercase mb-2">Exclusive Listings</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">Featured Properties</h2>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Property 1 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/house1/800/600" alt="Luxury Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-900 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">House</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 4.5 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">10 Marla Luxury Villa</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Block A, Gulberg Greens</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Bedrooms"><i class="fa-solid fa-bed mr-1"></i> 5</span>
+                <span title="Bathrooms"><i class="fa-solid fa-bath mr-1"></i> 6</span>
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 10 Marla</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up" style="transition-delay: 100ms;">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/plot2/800/600" alt="Premium Plot" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-gold-500 text-brand-900 text-xs font-bold px-3 py-1 uppercase tracking-wider">Plot</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 2.8 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">1 Kanal Premium Plot</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Block C, Gulberg Greens</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 1 Kanal</span>
+                <span><i class="fa-solid fa-road mr-1"></i> Main Boulevard</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up" style="transition-delay: 200ms;">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/commercial3/800/600" alt="Commercial Shop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">Commercial</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 1.5 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">Commercial Plaza Shop</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Diamond Mall, Block B</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 400 Sq Ft</span>
+                <span><i class="fa-solid fa-building mr-1"></i> Ground Floor</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property 4 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/house4/800/600" alt="Modern Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-900 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">House</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 2.2 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">5 Marla Modern Villa</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Block A, Gulberg Greens</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Bedrooms"><i class="fa-solid fa-bed mr-1"></i> 3</span>
+                <span title="Bathrooms"><i class="fa-solid fa-bath mr-1"></i> 4</span>
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 5 Marla</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property 5 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up" style="transition-delay: 100ms;">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/farmhouse5/800/600" alt="Farmhouse" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-900 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">House</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 12 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">2 Kanal Luxury Farmhouse</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Farmhouse Lane, Gulberg</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Bedrooms"><i class="fa-solid fa-bed mr-1"></i> 6</span>
+                <span title="Bathrooms"><i class="fa-solid fa-bath mr-1"></i> 7</span>
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 2 Kanal</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property 6 -->
+        <div class="bg-white rounded-sm shadow-md card-hover overflow-hidden fade-in-up" style="transition-delay: 200ms;">
+          <div class="relative h-64 overflow-hidden group">
+            <img src="https://picsum.photos/seed/office6/800/600" alt="Executive Office" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">Commercial</div>
+            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p class="text-white font-bold text-xl">PKR 3.5 Crore</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-brand-900 mb-2 font-serif">Executive Office Space</h3>
+            <p class="text-gray-500 text-sm mb-4 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> The Corporate Center</p>
+            <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+              <div class="flex gap-4 text-gray-600 text-sm">
+                <span title="Area"><i class="fa-solid fa-vector-square mr-1"></i> 1200 Sq Ft</span>
+                <span><i class="fa-solid fa-building mr-1"></i> 3rd Floor</span>
+              </div>
+            </div>
+            <a href="#contact" class="mt-6 block w-full text-center border border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white py-2 transition-colors font-medium text-sm uppercase tracking-wider">View Details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us Section -->
+  <section class="py-24 bg-brand-900 text-white relative overflow-hidden">
+    <!-- Decorative pattern -->
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 30px 30px;"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Why Choose Gulberg Light</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">We don't just sell properties; we build long-term relationships based on trust, transparency, and exceptional service.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-brand-800/50 p-8 rounded-sm border border-brand-800 text-center hover:border-gold-500 transition-colors fade-in-up">
+          <div class="w-16 h-16 bg-brand-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold-500/30 text-gold-500 text-2xl">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">Trusted Property Consultants</h3>
+          <p class="text-gray-400 text-sm">Registered and verified agents providing honest, unbiased advice for your property needs.</p>
+        </div>
+        
+        <div class="bg-brand-800/50 p-8 rounded-sm border border-brand-800 text-center hover:border-gold-500 transition-colors fade-in-up" style="transition-delay: 100ms;">
+          <div class="w-16 h-16 bg-brand-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold-500/30 text-gold-500 text-2xl">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">Expert Market Knowledge</h3>
+          <p class="text-gray-400 text-sm">Deep understanding of Gulberg Greens trends to ensure you buy or sell at the right price.</p>
+        </div>
+
+        <div class="bg-brand-800/50 p-8 rounded-sm border border-brand-800 text-center hover:border-gold-500 transition-colors fade-in-up" style="transition-delay: 200ms;">
+          <div class="w-16 h-16 bg-brand-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold-500/30 text-gold-500 text-2xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">Secure Property Deals</h3>
+          <p class="text-gray-400 text-sm">100% safe transactions with complete legal verification and documentation support.</p>
+        </div>
+
+        <div class="bg-brand-800/50 p-8 rounded-sm border border-brand-800 text-center hover:border-gold-500 transition-colors fade-in-up" style="transition-delay: 300ms;">
+          <div class="w-16 h-16 bg-brand-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold-500/30 text-gold-500 text-2xl">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 font-serif">Best Investment Opportunities</h3>
+          <p class="text-gray-400 text-sm">Exclusive access to high-ROI commercial and residential projects before they hit the market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Latest Projects Section -->
+  <section id="projects" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <p class="text-gold-600 font-semibold tracking-wider uppercase mb-2">Developments</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900">Latest Projects in Gulberg Greens</h2>
+        <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+      </div>
+
+      <div class="space-y-16">
+        <!-- Project 1 -->
+        <div class="flex flex-col lg:flex-row gap-10 items-center fade-in-up">
+          <div class="w-full lg:w-1/2 h-[400px] relative rounded-sm overflow-hidden shadow-xl">
+            <img src="https://picsum.photos/seed/diamondmall/800/600" alt="Diamond Mall & Residency" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-gold-500 text-brand-900 font-bold px-4 py-1 text-sm uppercase tracking-wider">Under Construction</div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-3xl font-serif font-bold text-brand-900 mb-4">Diamond Mall & Residency</h3>
+            <p class="text-gray-500 mb-6 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Block B, Gulberg Greens</p>
+            <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+              A state-of-the-art commercial and residential complex offering luxury apartments and premium retail spaces. Designed for modern lifestyles with world-class amenities, dedicated parking, and 24/7 security.
+            </p>
+            <a href="#contact" class="inline-flex items-center text-brand-900 font-bold hover:text-gold-600 transition-colors group">
+              Inquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="flex flex-col lg:flex-row-reverse gap-10 items-center fade-in-up">
+          <div class="w-full lg:w-1/2 h-[400px] relative rounded-sm overflow-hidden shadow-xl">
+            <img src="https://picsum.photos/seed/gulbergheights/800/600" alt="Gulberg Heights" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div class="absolute top-4 left-4 bg-brand-900 text-white font-bold px-4 py-1 text-sm uppercase tracking-wider">Completed</div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-3xl font-serif font-bold text-brand-900 mb-4">Gulberg Heights</h3>
+            <p class="text-gray-500 mb-6 flex items-center"><i class="fa-solid fa-location-dot mr-2 text-gold-500"></i> Block A, Gulberg Greens</p>
+            <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+              Experience modern living at its finest. Gulberg Heights features spacious, sunlit apartments with panoramic views of the Margalla Hills. Ready for possession with top-notch community facilities.
+            </p>
+            <a href="#contact" class="inline-flex items-center text-brand-900 font-bold hover:text-gold-600 transition-colors group">
+              Inquire Now <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials Section -->
+  <section class="py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-4">Client Testimonials</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Hear what our valued clients have to say about their experience with Gulberg Light Marketing.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-white p-8 rounded-sm shadow-md fade-in-up">
+          <div class="flex text-gold-500 mb-4 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6 leading-relaxed">"Best real estate agency in Islamabad! They helped me find the perfect commercial plot for my business. Their professionalism and market knowledge are truly unmatched."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-900 font-bold text-xl mr-4">A</div>
+            <div>
+              <h4 class="font-bold text-brand-900">Ahmed Khan</h4>
+              <p class="text-sm text-gray-500">Business Owner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-8 rounded-sm shadow-md fade-in-up" style="transition-delay: 100ms;">
+          <div class="flex text-gold-500 mb-4 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6 leading-relaxed">"Highly professional team. The process of buying our dream home in Gulberg Greens was smooth and transparent from start to finish. Highly recommended!"</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-900 font-bold text-xl mr-4">S</div>
+            <div>
+              <h4 class="font-bold text-brand-900">Sara Ali</h4>
+              <p class="text-sm text-gray-500">Homeowner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-8 rounded-sm shadow-md fade-in-up" style="transition-delay: 200ms;">
+          <div class="flex text-gold-500 mb-4 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6 leading-relaxed">"I was looking for a secure investment and Gulberg Light guided me perfectly. Their insights into the market trends ensured I made a highly profitable decision."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-900 font-bold text-xl mr-4">M</div>
+            <div>
+              <h4 class="font-bold text-brand-900">Muhammad Usman</h4>
+              <p class="text-sm text-gray-500">Investor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 & 9. Contact & Map Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <!-- Contact Form -->
+        <div class="fade-in-up">
+          <p class="text-gold-600 font-semibold tracking-wider uppercase mb-2">Get In Touch</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-900 mb-8">Contact Our Experts</h2>
+          
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all" placeholder="John Doe">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all" placeholder="0300 1234567">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all" placeholder="john@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+              <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all resize-none" placeholder="I am interested in..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-bold py-4 px-8 rounded-sm transition-colors text-lg">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Mobile Call Button (Visible only on mobile) -->
+          <a href="tel:03185458823" class="md:hidden mt-6 w-full bg-gold-500 text-brand-900 font-bold py-4 px-8 rounded-sm flex items-center justify-center text-lg">
+            <i class="fa-solid fa-phone mr-2"></i> Call Us Now
+          </a>
+        </div>
+
+        <!-- Map & Info -->
+        <div class="fade-in-up" style="transition-delay: 200ms;">
+          <div class="bg-brand-50 p-8 rounded-sm mb-8 border border-gray-100">
+            <h3 class="text-xl font-serif font-bold text-brand-900 mb-6">Office Location</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-4 text-xl"></i>
+                <span class="text-gray-600">Office no 35 Ground Floor, Diamond Mall & Residency, Service Rd S, Gulberg Greens Block B, Islamabad, Pakistan</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa-solid fa-phone text-gold-500 mr-4 text-xl"></i>
+                <a href="tel:03185458823" class="text-brand-900 font-bold text-lg hover:text-gold-600 transition-colors">0318 5458823</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="h-[300px] rounded-sm overflow-hidden shadow-md">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.067332766336!2d73.1557007!3d33.6295556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfeb00647b1981%3A0x6a0589139268846c!2sGulberg%20Light%20Marketing%20(Pvt).%20Ltd!5e0!3m2!1sen!2s!4v1709664000000!5m2!1sen!2s" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 & 11. Footer & Social Media -->
+  <footer class="bg-brand-900 text-gray-300 pt-16 pb-8 border-t-4 border-gold-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-8 h-8 bg-gold-500 rounded-sm flex items-center justify-center text-brand-900 font-serif font-bold">GL</div>
+            <h3 class="text-white text-xl font-serif font-bold tracking-wide">Gulberg Light</h3>
+          </div>
+          <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+            Your trusted partner in real estate. We specialize in premium properties, commercial plots, and luxury homes in Gulberg Greens, Islamabad.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex space-x-4">
+            <a href="https://web.facebook.com/sardarrizwanrealtor/" target="_blank" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-gold-500 hover:text-brand-900 transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/gulberglightmarketing_pvt.ltd/" target="_blank" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-gold-500 hover:text-brand-900 transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@Gulberg.Light.Marketing/featured" target="_blank" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-gold-500 hover:text-brand-900 transition-colors">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://share.google/mGOWHopjrq4cEJsX8" target="_blank" title="Google Business Profile" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-gold-500 hover:text-brand-900 transition-colors">
+              <i class="fa-brands fa-google"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white text-lg font-serif font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#home" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right text-gold-500 mr-2"></i> Home</a></li>
+            <li><a href="#properties" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right text-gold-500 mr-2"></i> Properties</a></li>
+            <li><a href="#about" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right text-gold-500 mr-2"></i> About Us</a></li>
+            <li><a href="#projects" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right text-gold-500 mr-2"></i> Latest Projects</a></li>
+            <li><a href="#contact" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right text-gold-500 mr-2"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="lg:col-span-2">
+          <h4 class="text-white text-lg font-serif font-bold mb-6">Contact Information</h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start">
+              <i class="fa-solid fa-location-dot text-gold-500 mt-1 mr-3 w-4 text-center"></i>
+              <span>Office no 35 Ground Floor, Diamond Mall & Residency, Service Rd S, Gulberg Greens Block B, Islamabad</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-phone text-gold-500 mr-3 w-4 text-center"></i>
+              <a href="tel:03185458823" class="hover:text-gold-400 transition-colors text-lg font-bold">0318 5458823</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fa-solid fa-envelope text-gold-500 mr-3 w-4 text-center"></i>
+              <a href="mailto:info@gulberglightmarketing.com" class="hover:text-gold-400 transition-colors">info@gulberglightmarketing.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 mt-8 text-center md:flex md:justify-between md:text-left text-sm">
+        <p>&copy; 2024 Gulberg Light Marketing (Pvt). Ltd. All rights reserved.</p>
+        <p class="mt-2 md:mt-0 text-gray-500">
+          Designed for Real Estate Excellence
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+        });
+      });
+
+      // Navbar Scroll Effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('bg-brand-900', 'shadow-lg');
+          navbar.classList.remove('bg-transparent', 'py-4');
+          navbar.classList.add('py-2');
+        } else {
+          navbar.classList.remove('bg-brand-900', 'shadow-lg');
+          navbar.classList.add('bg-transparent', 'py-4');
+          navbar.classList.remove('py-2');
+        }
+      });
+
+      // Form Submission
+      const form = document.getElementById('contactForm');
+      if(form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you for your inquiry! Our team will contact you shortly.');
+          form.reset();
+        });
+      }
+
+      // Scroll Animation (Intersection Observer)
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
 </html>
 
