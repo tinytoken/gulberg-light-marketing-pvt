@@ -133,7 +133,7 @@ function ManageProperties() {
     fetchProperties();
   }, []);
 
-  const handleDelete = async (id: number) => {
+  const handleDelete = async (id: string | number) => {
     if (window.confirm('Are you sure you want to delete this property?')) {
       await fetch(`/api/properties/${id}`, { method: 'DELETE' });
       fetchProperties();

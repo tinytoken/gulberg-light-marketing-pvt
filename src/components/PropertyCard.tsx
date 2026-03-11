@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Bed, Bath, Square, ArrowRight } from 'lucide-react';
 
 export interface Property {
-  id: number;
+  id: string | number;
   title: string;
   description: string;
   price: string;

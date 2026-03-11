@@ -65,6 +65,23 @@ A complete full-stack real estate agency website built with React, Node.js, Expr
 
 ## Deployment Guide
 
+### Deploying on Vercel (Recommended)
+
+This application is fully configured to be deployed on Vercel using Serverless Functions and MongoDB.
+
+1. **Set up MongoDB:**
+   - Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+   - Get your connection string (URI).
+
+2. **Deploy to Vercel:**
+   - Push this code to a GitHub repository.
+   - Go to [Vercel](https://vercel.com) and import the repository.
+   - In the **Environment Variables** section, add:
+     - `MONGODB_URI`: Your MongoDB connection string.
+   - Click **Deploy**.
+
+Vercel will automatically build the React frontend and deploy the Express API routes in `api/index.ts` as serverless functions, routed via `vercel.json`.
+
 ### Deploying on a VPS (Ubuntu/Debian)
 
 1. **Clone the repository to your VPS**
@@ -84,15 +101,6 @@ A complete full-stack real estate agency website built with React, Node.js, Expr
    *(Consider using PM2 to keep the app running in the background: `pm2 start npm --name "gulberg-real-estate" -- start`)*
 6. **Set up Nginx as a reverse proxy** to route traffic from port 80/443 to port 3000.
 
-### Deploying on Vercel
-
-Since this is a full-stack application using Express and SQLite, deploying directly to Vercel requires some modifications. Vercel is designed for serverless functions, and SQLite requires a persistent file system which Vercel does not provide.
-
-**To deploy on Vercel, you must:**
-1. Migrate the database from SQLite to MongoDB (using Mongoose) or PostgreSQL (using Prisma/Drizzle).
-2. Convert the Express routes in `server.ts` to Vercel Serverless Functions (`api/` directory) or use Next.js API routes.
-3. Update the frontend API calls to point to the new serverless endpoints.
-
-**Alternative Deployment Platforms (Easier for this stack):**
+### Alternative Deployment Platforms (Easier for this stack):
 - **Render.com:** Create a "Web Service", set build command to `npm run build`, and start command to `npm start`. Add a "Disk" to persist the `database.sqlite` file.
 - **Railway.app:** Simply connect your GitHub repository. Railway will automatically detect the Node.js environment and run the `start` script. Add a persistent volume for the database.
